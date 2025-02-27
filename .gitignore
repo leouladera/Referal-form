@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -24,3 +25,11 @@ dist-ssr
 *.sw?
 
 .vercel
+=======
+.DS_Store
+/node_modules/
+
+# React Router
+/.react-router/
+/build/
+>>>>>>> 40a1936a7d960254ab2f9cef95ac5604797f4317
