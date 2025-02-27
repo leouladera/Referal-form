@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Plaster&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid rgb(255, 0, 0); */
+}
+body {
+  background-color: #f6fffe;
+  display: flex;
+  flex-direction: column;
+}
+.leftTitle {
+  display: flex;
+  /* border: 5px solid rgb(0, 68, 255); */
+  width: fit-content;
+  gap: 0px;
+}
+.title {
+  color: #003834;
+  font-family: "Outfit", serif;
+  text-transform: uppercase;
+  transform: rotate(-90deg);
+  /* border: 2px solid black; */
+  margin-top: 15rem;
+  width: 45rem;
+  font-size: 5rem;
+  text-align: left;
+  margin-left: -15rem;
+  /* position: relative; */
+}
+.line {
+  width: 1.3px;
+  height: 35rem;
+  /* margin-top: 50px; */
+  background-color: #004c47e1;
+  position: absolute;
+  border-radius: 1000px;
+  left: 15rem;
+  top: 8rem;
+}
+
+.Buttons {
+  margin-top: 0rem;
+  background-color: #e6f1f0;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  padding-block: 5px;
+  padding-inline: 10%;
+  gap: 30%;
+  justify-content: center;
+  margin-inline: auto;
+}
+.Buttons .SignUP {
+  font-family: "Open Sans", serif;
+  font-optical-sizing: auto;
+  color: #014742;
+  font-weight: 600;
+  font-size: 1rem;
+  border-bottom: 2.5px solid #048b82;
+  border-radius: 2px;
+  padding-bottom: 2px;
+  cursor: pointer;
+}
+.Buttons .LogIN {
+  font-family: "Open Sans", serif;
+  font-optical-sizing: auto;
+  color: #014742;
+  font-weight: 600;
+  font-size: 1rem;
+  /* border-bottom: 2px solid #048b82; */
+  padding-bottom: 2px;
+  cursor: pointer;
+}
+.Buttons .lineButton {
+  cursor: pointer;
+  height: 20px;
+  margin-block: auto;
+  width: 1.5px;
+  background-color: #b2b2b2;
+}
+.welcome {
+  color: #00645d;
+  position: absolute;
+  top: 25%;
+  left: 0%;
+  text-transform: uppercase;
+  font-family: "Outfit", serif;
+  font-optical-sizing: auto;
+  font-size: 2.3rem;
+}
+.container {
+  position: absolute;
+  top: 3%;
+  left: 40%;
+  /* border: 1px solid #003834; */
+  width: 45%;
+  padding-top: 15rem;
+}
+.container p {
+  font-family: "Inter", serif;
+  color: #636363;
+}
+.container .pPassword {
+  font-family: "Inter", serif;
+  color: #636363;
+  margin-top: 1.5rem;
+}
+.container .nameContainer {
+  display: flex;
+  gap: 1rem;
+}
+.container .name {
+  background-color: #f5f5f5;
+  width: 50%;
+  height: 2.5rem;
+  padding-left: 10px;
+  border: 1px solid #d5d5d5;
+  border-radius: 5px;
+  font-family: "Open Sans", serif;
+  margin-bottom: 1.5rem;
+}
+.container .email {
+  background-color: #f5f5f5;
+  width: 100%;
+  height: 2.5rem;
+  padding-left: 10px;
+  border: 1px solid #d5d5d5;
+  border-radius: 5px;
+  font-family: "Open Sans", serif;
+}
+.container .password {
+  background-color: #f5f5f5;
+  width: 100%;
+  height: 2.5rem;
+  padding-inline: 10px;
+  border: 1px solid #d5d5d5;
+  border-radius: 5px;
+  font-family: "Open Sans", serif;
+  /* font-size: 1.1rem; */
+}
+.container .Submit {
+  margin-top: 2rem;
+  width: 100%;
+
+  height: 2.5rem;
+  border: none;
+  background-color: #00423d;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-family: "Inter", serif;
+  font-weight: 300;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.container .Submit:hover {
+  background-color: #00423de8;
+}
+.container .Submit:focus {
+  background-color: #00423de8;
+}
+.container .Create {
+  color: #9b9b9b;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+.container .Create a {
+  color: #00978c;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+.container .lineGoogle {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.container .lineGoogle .lines {
+  width: 15rem;
+  height: 0.6px;
+  background-color: #003834c5;
+}
+.container .lineGoogle .signInGoogle {
+  text-transform: capitalize;
+  color: #717171;
+  font-size: 0.9rem;
+}
+.container .google {
+  padding-inline: 4rem;
+  padding-block: 0.8rem;
+  margin-inline: auto;
+  text-align: center;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid #003834;
+  color: #2f2f2f;
+  text-transform: uppercase;
+  font-family: "Open Sans", serif;
+  font-weight: 500;
+  margin-top: 2rem;
+  cursor: pointer;
+  margin-left: 38%;
+  font-size: 1.1rem;
+  font-weight: 400;
+  align-items: center;
+  display: flex;
+  transition: all 0.25s;
+}
+.container .google:hover {
+  background-color: #003834;
+  color: white;
+}
+.container .google:focus {
+  background-color: #003834;
+  color: white;
+}
+FontAwesomeIcon {
+  color: #c31616;
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+footer {
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  left: 50%;
+  text-transform: capitalize;
+  color: #969696;
+  font-family: "Inter", serif;
+  font-size: 0.9rem;
+  /* margin-top: 50%; */
+  /* border: 1px solid #003834; */
+}
