@@ -13,11 +13,15 @@ function SignUp() {
   const handleSignUpClick = () => {
     navigate2("/signup");
   };
-  const [text, setText] = useState("Login");
+  const navigateHome = useNavigate();
+  const handleHomeClick = () => {
+    navigateHome("/home");
+  };
+  const [text, setText] = useState("Signup");
   const click = () => {
     setText("Loading...");
     setTimeout(() => {
-      setText("Login");
+      setText("Signup");
     }, 1000);
   };
   const [GoogleText, setGoogleText] = useState("google");
@@ -82,7 +86,14 @@ function SignUp() {
           type="password"
           required
         ></input>
-        <button type="submit" className={styles.Submit} onClick={click}>
+        <button
+          type="submit"
+          className={styles.Submit}
+          onClick={() => {
+            handleHomeClick();
+            click();
+          }}
+        >
           {text}
         </button>
         <p className={styles.Create}>
