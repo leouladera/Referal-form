@@ -1,8 +1,12 @@
 import styles from "./Home.module.css";
+import { useNavigate } from "react-router-dom";
+
 function Home() {
+  const NavigateSignup = useNavigate();
+  const NavigateSignupHandler = () => NavigateSignup("/signup");
   return (
     <>
-      <div className={styles.pfp}></div>
+      <div className={styles.pfp} onClick={NavigateSignupHandler}></div>
       <div className={styles.header}>
         <h1 className={styles.heading}>Good evening, Teacher</h1>
         <p>Andinet International School Discipline Referral Form</p>
@@ -88,6 +92,7 @@ function Home() {
                 <input type="checkbox" placeholder="Parent/Guardian Name" />
                 <p>Theft </p>
               </div>
+              {/* ................................................................. */}
               <div className={styles.item}>
                 <input type="checkbox" placeholder="Parent/Guardian Name" />
                 <p>Not completing homework/classwork</p>

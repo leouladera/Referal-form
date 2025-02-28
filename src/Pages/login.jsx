@@ -14,7 +14,8 @@ function SignUp() {
   const handleSignUpClick = () => {
     navigate2("/signup");
   };
-
+  const navigateHome = useNavigate();
+  const navigateHomeHandler = () => navigateHome("/home");
   const [text, setText] = useState("Login");
   const click = () => {
     setText("Loading...");
@@ -65,7 +66,14 @@ function SignUp() {
           type="password"
           required
         ></input>
-        <button type="submit" className={styles.Submit} onClick={click}>
+        <button
+          type="submit"
+          className={styles.Submit}
+          onClick={() => {
+            click();
+            navigateHomeHandler();
+          }}
+        >
           {text}
         </button>
         <p className={styles.Create}>
