@@ -2,7 +2,28 @@ import styles from "./Home.module.css";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-regular-svg-icons";
+import { useRef, useEffect } from "react";
+import flatpickr from "flatpickr";
+import "flatpickr/dist/flatpickr.min.css";
 function Home() {
+  const dateRef = useRef(null);
+  const timeRef = useRef(null);
+
+  useEffect(() => {
+    // Date Picker
+    flatpickr(dateRef.current, {
+      dateFormat: "Y-m-d",
+      maxDate: "today", // Date format
+    });
+
+    // Time Picker
+    flatpickr(timeRef.current, {
+      enableTime: true, // Enable time selection
+      noCalendar: true, // Hide the calendar
+      dateFormat: "H:i", // Time format
+      time_24hr: "true",
+    });
+  }, []);
   const NavigateSignup = useNavigate();
   const NavigateSignupHandler = () => NavigateSignup("/signup");
   const d = new Date();
@@ -12,7 +33,7 @@ function Home() {
     timeEvent = "morning";
   } else if (time >= 12 && time <= 18) {
     timeEvent = "Afternoon";
-  } else if (time >= 19 && time <= 22) {
+  } else {
     timeEvent = "Evening";
   }
   return (
@@ -28,9 +49,9 @@ function Home() {
           <div className={styles.option}>
             <p>referral number</p>{" "}
             <select id="numberSelect">
-              <option value="1"># 1</option>
-              <option value="2"># 2</option>
-              <option value="3"># 3</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
             </select>
           </div>
         </div>
@@ -45,7 +66,7 @@ function Home() {
                 <input type="text" placeholder="Year" />
               </div>
               <div className={styles.item}>
-                <input type="date" placeholder="Date" />
+                <input type="date" placeholder="Date" ref={dateRef} />
               </div>
             </div>
           </div>
@@ -130,13 +151,17 @@ function Home() {
             <div className={styles.content}>
               <div className={styles.leftContent}>
                 <div className={styles.item}>
-                  <input type="date" placeholder="Date Of Incident" />
+                  <input
+                    type="date"
+                    placeholder="Date Of Incident"
+                    ref={dateRef}
+                  />
                 </div>
                 <div className={styles.item}>
                   <input type="text" placeholder="Location" />
                 </div>
                 <div className={styles.item}>
-                  <input type="time" placeholder="Time" />
+                  <input type="time" placeholder="Time" ref={timeRef} />
                 </div>
               </div>
               <div className={styles.rightContent}>
