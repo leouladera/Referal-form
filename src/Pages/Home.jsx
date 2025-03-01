@@ -13,14 +13,14 @@ function Home() {
     // Date Picker
     flatpickr(dateRef.current, {
       dateFormat: "Y-m-d",
-      maxDate: "today", // Date format
+      maxDate: "today",
     });
 
     // Time Picker
     flatpickr(timeRef.current, {
-      enableTime: true, // Enable time selection
-      noCalendar: true, // Hide the calendar
-      dateFormat: "H:i", // Time format
+      enableTime: true,
+      noCalendar: true,
+      dateFormat: "H:i",
       time_24hr: "true",
     });
   }, []);

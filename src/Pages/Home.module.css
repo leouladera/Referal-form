@@ -242,6 +242,8 @@ select:focus {
   flex-wrap: wrap;
   margin-top: 1rem;
   padding-right: 0rem;
+  /* color: #8b8b8b; */
+  gap: 3rem;
 }
 .items .Information .content .leftContent {
   display: flex;

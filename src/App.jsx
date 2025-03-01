@@ -20,7 +20,7 @@ function App() {
     textTransform: "capitalize",
   };
   const style2 = {
-    color: "#696969",
+    color: "#8b8b8b",
     fontSize: "1.2rem",
     width: "25rem",
     marginInline: "auto",
