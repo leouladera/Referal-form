@@ -7,14 +7,19 @@
 }
 body {
   background-color: #f6fffe;
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
 }
 .leftTitle {
   display: flex;
+  align-items: center;
   /* border: 5px solid rgb(0, 68, 255); */
   width: fit-content;
-  gap: 0px;
+  /* margin-top: 6rem; */
+  width: fit-content;
+  text-align: left;
+  margin-left: -15rem;
+  gap: 0rem;
 }
 .title {
   color: #003834;
@@ -22,22 +27,20 @@ body {
   text-transform: uppercase;
   transform: rotate(-90deg);
   /* border: 2px solid black; */
-  margin-top: 15rem;
-  width: 45rem;
   font-size: 5rem;
-  text-align: left;
-  margin-left: -15rem;
+  height: fit-content;
   /* position: relative; */
 }
 .line {
-  width: 1.3px;
+  width: 2px;
   height: 35rem;
   /* margin-top: 50px; */
   background-color: #004c47e1;
-  position: absolute;
+  /* position: absolute; */
+  margin-left: -30%;
   border-radius: 1000px;
-  left: 15rem;
-  top: 8rem;
+  /* left: 15rem; */
+  /* top: 8rem; */
 }
 
 .Buttons {
@@ -46,12 +49,13 @@ body {
   border-radius: 5px;
   text-align: center;
   display: flex;
-  position: absolute;
-  top: 10%;
-  left: 10%;
+  /* position: absolute; */
+  /* top: 10%;
+  left: 10%; */
   width: 80%;
   padding-block: 5px;
-  padding-inline: 10%;
+  padding-inline: 20%;
+  margin-bottom: 4rem;
   gap: 30%;
   justify-content: center;
   margin-inline: auto;
@@ -86,21 +90,89 @@ body {
 }
 .welcome {
   color: #00645d;
-  position: absolute;
+  /* position: absolute;
   top: 25%;
-  left: 0%;
+  left: 0%; */
   text-transform: uppercase;
   font-family: "Outfit", serif;
   font-optical-sizing: auto;
   font-size: 2.3rem;
 }
 .container {
-  position: absolute;
+  /* position: absolute;
   top: 3%;
-  left: 40%;
-  /* border: 1px solid #003834; */
-  width: 45%;
-  padding-top: 15rem;
+  left: 40%; */
+  width: 100%;
+  height: fit-content;
+  margin-inline: auto;
+  /* padding-top: 15rem; */
+  /* border: 2px solid black; */
+  display: flex;
+  /* flex-wrap: wrap; */
+  padding: 5rem 3rem 2.8rem 3rem;
+  /* gap: 4rem; */
+  /* justify-content: space-around; */
+}
+@media screen and (max-width: 921px) {
+  .container {
+    /* position: absolute;
+    top: 3%;
+    left: 40%; */
+    width: 100%;
+    height: fit-content;
+    margin-inline: auto;
+    /* padding-top: 15rem; */
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    padding: 1rem 3rem 2.8rem 3rem;
+    /* gap: 4rem; */
+    /* justify-content: space-around; */
+  }
+  .Buttons {
+    width: 100%;
+    padding-inline: 10%;
+
+    gap: 20%;
+  }
+  .title {
+    color: #003834;
+    font-family: "Outfit", serif;
+    text-transform: uppercase;
+    transform: rotate(0deg);
+    /* border: 2px solid black; */
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+  .leftTitle {
+    display: flex;
+    align-items: center;
+    /* border: 5px solid rgb(0, 68, 255); */
+    width: fit-content;
+    /* margin-top: 6rem; */
+    width: fit-content;
+    text-align: left;
+    margin-inline: auto;
+    gap: 0rem;
+  }
+  .line {
+    display: none;
+    height: 2px;
+    width: 35rem;
+    /* margin-top: 50px; */
+    background-color: #004c47e1;
+    /* position: absolute; */
+    margin-left: -30%;
+    border-radius: 1000px;
+    /* left: 15rem; */
+    /* top: 8rem; */
+  }
+  .container .nameContainer {
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* width: 100%; */
+  }
 }
 .container p {
   font-family: "Inter", serif;
@@ -113,11 +185,12 @@ body {
 }
 .container .nameContainer {
   display: flex;
+  /* flex-wrap: wrap; */
   gap: 1rem;
 }
 .container .name {
   background-color: #f5f5f5;
-  width: 50%;
+  width: 100%;
   height: 2.5rem;
   padding-left: 10px;
   border: 1px solid #d5d5d5;
@@ -208,10 +281,10 @@ body {
   font-weight: 500;
   margin-top: 2rem;
   cursor: pointer;
-  margin-left: 38%;
+  /* margin-left: 38%; */
   font-size: 1.1rem;
   font-weight: 400;
-  align-items: center;
+  /* align-items: center; */
   display: flex;
   transition: all 0.25s;
 }
@@ -223,20 +296,15 @@ body {
   background-color: #003834;
   color: white;
 }
-FontAwesomeIcon {
-  color: #c31616;
-  font-size: 1.2rem;
-  margin-right: 10px;
-}
-footer {
-  position: absolute;
-  bottom: 0px;
-  display: flex;
-  left: 50%;
+
+.foot {
+  /* position: absolute; */
+  width: fit-content;
+  margin-inline: auto;
   text-transform: capitalize;
   color: #969696;
   font-family: "Inter", serif;
   font-size: 0.9rem;
-  /* margin-top: 50%; */
+  /* margin-top: 1rem; */
   /* border: 1px solid #003834; */
 }

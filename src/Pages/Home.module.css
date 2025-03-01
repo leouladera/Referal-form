@@ -162,13 +162,7 @@ select:focus {
   background-color: transparent;
   font-size: 1rem;
 }
-.items .studentInfo2 {
-  /* grid-area: studentInfo; */
-  background-color: #00ff15;
-  padding: 3px;
-  font-size: 1.3rem;
-  /* grid-column: span 2 / auto; */
-}
+
 .items .offence {
   /* grid-area: studentInfo; */
   background-color: #fbfbfb;
@@ -366,6 +360,9 @@ select:focus {
 }
 
 @media screen and (max-width: 480px) {
+  .container .top {
+    margin-bottom: 2rem;
+  }
   .header .heading {
     font-size: 1.5rem;
   }
@@ -373,19 +370,40 @@ select:focus {
   .header p {
     width: 100%;
   }
-
+  .container {
+    padding-inline: 1rem;
+    position: relative;
+  }
+  .items .offence {
+    padding: 3rem 1rem;
+  }
+  .items .offence .content .item {
+    font-size: 0.9rem;
+  }
   .items .offence {
     padding: 1rem;
   }
-
+  .items .offence .content .item input {
+    width: 25px;
+    height: 25px;
+    accent-color: #004a45;
+  }
+  .items .Information {
+    padding: 3rem 1rem;
+  }
   .items .Information {
     padding: 1.5rem;
   }
+
   .items .Information .content .item input {
     font-size: 1rem;
-    width: 12rem;
+    width: 15rem;
     cursor: text;
     background-color: transparent;
+  }
+  .items .Information .content .leftContent {
+    width: 100%;
+    /* border: 1px solid black; */
   }
 }
 /* .items .parentInfo {
