@@ -1,14 +1,25 @@
 import styles from "./Home.module.css";
 import { useNavigate } from "react-router-dom";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaperPlane } from "@fortawesome/free-regular-svg-icons";
 function Home() {
   const NavigateSignup = useNavigate();
   const NavigateSignupHandler = () => NavigateSignup("/signup");
+  const d = new Date();
+  let time = d.getHours();
+  let timeEvent = "";
+  if (time >= 6 && time <= 11) {
+    timeEvent = "morning";
+  } else if (time >= 12 && time <= 18) {
+    timeEvent = "Afternoon";
+  } else if (time >= 19 && time <= 22) {
+    timeEvent = "Evening";
+  }
   return (
     <>
       <div className={styles.pfp} onClick={NavigateSignupHandler}></div>
       <div className={styles.header}>
-        <h1 className={styles.heading}>Good evening, Teacher</h1>
+        <h1 className={styles.heading}>Good {timeEvent}, Teacher</h1>
         <p>Andinet International School Discipline Referral Form</p>
       </div>
       <div className={styles.container}>
@@ -142,7 +153,10 @@ function Home() {
           {/* <div className={styles.parentInfo}></div>
            */}
         </div>
-        <button>Submit</button>
+        <button>
+          Submit{" "}
+          <FontAwesomeIcon icon={faPaperPlane} style={{ fontWeight: "400" }} />
+        </button>
       </div>
     </>
   );
