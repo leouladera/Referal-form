@@ -1,10 +1,13 @@
 import styles from "./Home.module.css";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPaperPlane } from "@fortawesome/free-regular-svg-icons";
+// import { faPaperPlane } from "@fortawesome/free-regular-svg-icons";
 import { useRef, useEffect } from "react";
 import flatpickr from "flatpickr";
+import { useState } from "react";
+import { faCheckCircle } from "@fortawesome/free-regular-svg-icons";
 import "flatpickr/dist/flatpickr.min.css";
+// import { color } from "motion/react";
 function Home() {
   const dateRef = useRef(null);
   const timeRef = useRef(null);
@@ -36,6 +39,41 @@ function Home() {
   } else {
     timeEvent = "Evening";
   }
+  const submitstyle = {
+    display: "inline",
+    color: "rgb(63, 235, 11)",
+    fontWeight: "400",
+  };
+  const [submit, setSubmit] = useState(
+    <>
+      Submit{" "}
+      {/* <FontAwesomeIcon icon={faPaperPlane} style={{ fontWeight: "400" }} /> */}
+    </>
+  );
+  const submitHandler = () => {
+    setSubmit(
+      <p style={submitstyle}>
+        {/* Submitted{" "} */}
+        <FontAwesomeIcon
+          icon={faCheckCircle}
+          style={{
+            fontWeight: "400",
+            marginLeft: "5px",
+            color: "#9BFB13",
+          }}
+        />
+      </p>
+    );
+    setTimeout(() => {
+      setSubmit(
+        <>
+          {" "}
+          Submit{" "}
+          {/* <FontAwesomeIcon icon={faPaperPlane} style={{ fontWeight: "400" }} /> */}
+        </>
+      );
+    }, 2000);
+  };
   return (
     <>
       <div className={styles.pfp} onClick={NavigateSignupHandler}></div>
@@ -45,7 +83,14 @@ function Home() {
       </div>
       <div className={styles.container}>
         <div className={styles.top}>
-          <h1>Referral form</h1>
+          <div className={styles.h1}>
+            <h1>Referral form</h1>
+            <p className={styles.req}>
+              all Fields marked with <span className={styles.ast}>*</span> are
+              required.
+            </p>
+          </div>
+
           <div className={styles.option}>
             <p>referral number</p>{" "}
             <select id="numberSelect">
@@ -57,16 +102,34 @@ function Home() {
         </div>
         <div className={styles.items}>
           <div className={styles.studentInfo}>
-            <h1>Student Info</h1>
+            <h1>
+              Student Info{" "}
+              <sup>
+                <span className={styles.ast}>*</span>
+              </sup>
+            </h1>
             <div className={styles.content}>
               <div className={styles.item}>
-                <input type="text" placeholder="Student Name" />
+                <input type="text" placeholder="First Name" />
+              </div>
+              <div className={styles.item}>
+                <input type="text" placeholder="Second Name" />
               </div>
               <div className={styles.item}>
                 <input type="text" placeholder="Year" />
               </div>
               <div className={styles.item}>
                 <input type="date" placeholder="Date" ref={dateRef} />
+              </div>
+              <div className={styles.itemGender}>
+                <div className={styles.gender}>
+                  <input type="radio" name="age" ref={dateRef} />
+                  Male
+                </div>
+                <div className={styles.gender}>
+                  <input type="radio" name="age" ref={dateRef} />
+                  Female
+                </div>
               </div>
             </div>
           </div>
@@ -82,7 +145,12 @@ function Home() {
             </div>
           </div>
           <div className={styles.offence}>
-            <h1>Offense (Check All That Apply):</h1>
+            <h1>
+              Offense (Check All That Apply):{" "}
+              <sup>
+                <span className={styles.ast}>*</span>
+              </sup>
+            </h1>
             <div className={styles.content}>
               <div className={styles.item}>
                 <input type="checkbox" placeholder="Parent/Guardian Name" />
@@ -147,7 +215,12 @@ function Home() {
             </div>
           </div>
           <div className={styles.Information}>
-            <h1>Information</h1>
+            <h1>
+              Information{" "}
+              <sup>
+                <span className={styles.ast}>*</span>
+              </sup>
+            </h1>
             <div className={styles.content}>
               <div className={styles.leftContent}>
                 <div className={styles.item}>
@@ -158,10 +231,21 @@ function Home() {
                   />
                 </div>
                 <div className={styles.item}>
-                  <input type="text" placeholder="Location" />
+                  <select name="" id="">
+                    <option value="">choose location</option>
+                    <option value="">Class room</option>
+                    <option value="">Hallway</option>
+                  </select>
                 </div>
                 <div className={styles.item}>
                   <input type="time" placeholder="Time" ref={timeRef} />
+                </div>
+                <div className={styles.item}>
+                  <select name="" id="">
+                    <option value="">choose location</option>
+                    <option value="">Class room</option>
+                    <option value="">Hallway</option>
+                  </select>
                 </div>
               </div>
               <div className={styles.rightContent}>
@@ -178,10 +262,7 @@ function Home() {
           {/* <div className={styles.parentInfo}></div>
            */}
         </div>
-        <button>
-          Submit{" "}
-          <FontAwesomeIcon icon={faPaperPlane} style={{ fontWeight: "400" }} />
-        </button>
+        <button onClick={submitHandler}>{submit} </button>
       </div>
     </>
   );

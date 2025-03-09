@@ -63,7 +63,7 @@ body {
 .Buttons .SignUP {
   font-family: "Open Sans", serif;
   font-optical-sizing: auto;
-  color: #014742;
+  color: #013c38;
   font-weight: 600;
   font-size: 1rem;
   border-bottom: 2.5px solid #048b82;
@@ -74,7 +74,7 @@ body {
 .Buttons .LogIN {
   font-family: "Open Sans", serif;
   font-optical-sizing: auto;
-  color: #014742;
+  color: #013c38;
   font-weight: 600;
   font-size: 1rem;
   /* border-bottom: 2px solid #048b82; */
@@ -89,7 +89,7 @@ body {
   background-color: #b2b2b2;
 }
 .welcome {
-  color: #00645d;
+  color: #004743;
   /* position: absolute;
   top: 25%;
   left: 0%; */
@@ -97,6 +97,7 @@ body {
   font-family: "Outfit", serif;
   font-optical-sizing: auto;
   font-size: 2.3rem;
+  /* margin-bottom: 2rem; */
 }
 .container {
   /* position: absolute;
@@ -109,9 +110,25 @@ body {
   /* border: 2px solid black; */
   display: flex;
   /* flex-wrap: wrap; */
-  padding: 5rem 3rem 2.8rem 3rem;
+  padding: 4rem 3rem 2.8rem 3rem;
   /* gap: 4rem; */
   /* justify-content: space-around; */
+}
+.role {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.role select {
+  text-transform: capitalize;
+  color: #404040;
+  font-size: 1.1rem;
+  border-bottom: 0.5px solid #3c3c3c;
+}
+.role .roleP {
+  font-size: 1rem;
 }
 @media screen and (max-width: 921px) {
   .container {
@@ -177,6 +194,7 @@ body {
 .container p {
   font-family: "Inter", serif;
   color: #636363;
+  font-size: 0.9rem;
 }
 .container .pPassword {
   font-family: "Inter", serif;
@@ -206,6 +224,10 @@ body {
   border: 1px solid #d5d5d5;
   border-radius: 5px;
   font-family: "Open Sans", serif;
+  padding-inline: 10px;
+}
+.phone {
+  margin-top: 1.5rem;
 }
 .container .password {
   background-color: #f5f5f5;
@@ -240,12 +262,12 @@ body {
   background-color: #00423de8;
 }
 .container .Create {
-  color: #9b9b9b;
+  color: #404040;
   font-size: 0.9rem;
   font-weight: 300;
 }
 .container .Create a {
-  color: #00978c;
+  color: #004743;
   text-decoration: none;
   cursor: pointer;
   font-size: 0.95rem;
@@ -302,7 +324,7 @@ body {
   width: fit-content;
   margin-inline: auto;
   text-transform: capitalize;
-  color: #969696;
+  color: #42424296;
   font-family: "Inter", serif;
   font-size: 0.9rem;
   /* margin-top: 1rem; */

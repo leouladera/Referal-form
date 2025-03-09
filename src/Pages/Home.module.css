@@ -57,14 +57,25 @@ select:focus {
   display: flex;
   justify-content: space-between;
   padding-inline: 3rem;
+  margin-bottom: 2rem;
   padding-top: 2rem;
+}
+.top .h1 .req {
+  font-family: "Inter", serif;
+  color: #959595;
+  text-transform: capitalize;
+  font-style: italic;
+  font-size: 0.98rem;
+}
+.ast {
+  color: red;
+  font-size: 1rem;
 }
 .container .top h1 {
   color: #004c47;
   font-family: "Outfit", serif;
-
   text-transform: capitalize;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 600;
 }
 .container .top .option {
@@ -72,7 +83,6 @@ select:focus {
   gap: 1rem;
   align-items: center;
   color: #004c47;
-  font-family: "Inter", serif;
   text-transform: capitalize;
   font-size: 1.2rem;
 }
@@ -83,6 +93,20 @@ select:focus {
   grid-auto-rows: auto;
   /* padding: 15px; */
   width: 100%;
+}
+.itemGender {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  accent-color: #004a45;
+}
+.itemGender .gender {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-family: "Inter", serif;
+  color: #454545;
+  text-transform: capitalize;
 }
 .items .studentInfo {
   /* grid-area: studentInfo; */
@@ -102,13 +126,13 @@ select:focus {
   grid-column: span 2 / auto;
 }
 .items .studentInfo h1 {
-  color: #004a45;
+  color: #004743;
   font-family: "Inter", serif;
   font-size: 2rem;
   text-transform: capitalize;
 }
 .items .parentInfo h1 {
-  color: #004a45;
+  color: #004743;
   font-family: "Inter", serif;
   font-size: 1.6rem;
   text-transform: capitalize;
@@ -253,6 +277,47 @@ select:focus {
   width: 100%;
   /* border: 1px solid black; */
 }
+.items .Information .content .leftContent select {
+  font-size: 1.2rem;
+  color: #646363;
+}
+.items .Information .content .leftContent optgroup {
+  font-weight: 400;
+  font-style: italic;
+  height: 2rem;
+}
+.customDropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background: white;
+  max-height: 150px; /* Scrollable */
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.option,
+.optGroup {
+  padding: 10px;
+}
+
+.option:hover {
+  background: lightgray;
+}
+
+.dropdown-btn {
+  padding: 10px;
+  cursor: pointer;
+  background: #f8f8f8;
+  border: 1px solid #ccc;
+}
+
 .items .Information .content .rightContent p {
   color: #004a45;
   font-family: "Inter", serif;
@@ -279,7 +344,7 @@ select:focus {
 .items .Information .content .rightContent textarea {
   border: 2px solid #8787877d;
   border-radius: 3px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   font-family: "Open Sans", serif;
   padding: 10px;
   font-size: 0.9rem;
@@ -292,8 +357,8 @@ select:focus {
   color: #181818;
 }
 .container button {
-  background: #004a45;
-  color: white;
+  background: #003833;
+  color: rgb(254, 254, 254);
   padding: 0.5rem 3rem;
   border: none;
   border-radius: 6px;

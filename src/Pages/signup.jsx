@@ -56,6 +56,15 @@ function SignUp() {
             </div>
           </div>
           <h1 className={styles.welcome}>SignUp</h1>
+          <div className={styles.role}>
+            <p className={styles.roleP}>Select Your Role:</p>
+            <select name="" id="">
+              <option value="">Select an option</option>
+              <option value="">Teacher</option>
+              <option value="">Staff</option>
+              <option value="">guard</option>
+            </select>
+          </div>
           <p>Full Name:</p>
           <div className={styles.nameContainer}>
             <input
@@ -75,7 +84,7 @@ function SignUp() {
               required
             ></input>
           </div>
-          <p>Email:</p>
+          <p>Username:</p>
           <input
             className={styles.email}
             name="email"
@@ -84,6 +93,17 @@ function SignUp() {
             type="email"
             required
           ></input>
+          <div className={styles.phone}>
+            <p>Phone Number:</p>
+            <input
+              className={styles.email}
+              name="pNumber"
+              id=""
+              placeholder="+251 912345678"
+              type="number"
+              required
+            ></input>
+          </div>
           <p className={styles.pPassword}>Password:</p>
           <input
             className={styles.password}
